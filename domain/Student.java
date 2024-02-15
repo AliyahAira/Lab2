@@ -1,58 +1,58 @@
 package domain;
 
 import java.util.ArrayList;
+import java.util.*;
 
-public class Student {
-    private String studentNumber;
-    private String name;
-    private String program;
-    private ArrayList<Course> courseList;
-    //private Integer totalUnitsEnrolled;
+ public class Student {
+   private String studentNumber;
+   private String name;
+   private String program;
+   private Integer totalUnitsEnrolled;
+   private List<Course> courseList;
 
-    //for student number
+    public void setStudentNumber(String studentNumber) {
+    this.studentNumber = studentNumber;
+    }
+
     public String getStudentNumber() {
-        return studentNumber;
-    }
-    public void setStudentNumber(String studentNumber){
-        this.studentNumber = studentNumber;
+    return studentNumber;
     }
 
-    //for name
+    public void setName(String name) {
+        this.name = name;
+       }
+
     public String getName() {
         return name;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
+       }
 
-    //for program 
+    public void setProgram(String program) {
+        this.program = program;
+       }
+
     public String getProgram() {
         return program;
-    }
-    public void setProgram(String program){
-        this.program = program;
-    }
+       }
 
-    //for arraylist
-    public ArrayList<Course> getCourseList() {
-        return courseList;
-    }
-    public void setCourseList (ArrayList<Course> courseList) {
+    public void setCourseList(List<Course> courseList) {
         this.courseList = courseList;
-    }
+       }
 
-    public String toString() {
-        String studentOutput = "Student number: " + studentNumber + "\n" +
-                               "Student name: " + name + "\n" +
-                               "Program: " + program + "\n" + "\n";
+    public List<Course> getCourseList() {
+        return courseList;
+       }
 
-        for (Course course : courseList) {
-            studentOutput += course.toString();
-        }
+    public void setTotalUnitsEnrolled(Integer totalUnitsEnrolled) {
+        this.totalUnitsEnrolled = totalUnitsEnrolled;
+       }
+        
+    public int getTotalUnitsEnrolled() {
+        int totalUnits = 0;
+        for(Course course : courseList){
+        totalUnits += course.getUnit();
+       }
 
-        return studentOutput;
-    }
-
-
-    //need pa dito ung total units enrolled
+    
+ return totalUnits;
+ }
 }

@@ -6,49 +6,45 @@ public class Course {
     private Integer unit;
     private String day;
     private String time;
-    
-    //for courseCode
-    public String getCourseCode(){
-        return courseCode;
-    }
-    public void setCourseCode(String courseCode){
+
+
+    public void setCourseCode(String courseCode) {
         this.courseCode = courseCode;
-    }
+        }
+    public String getCourseCode() {
+        return courseCode;
+        }
 
-    //for description
-    public String getDescription(){
-        return description;
-    }
-    public void setDescription (String description){
+
+    public void setDescription(String description) {
         this.description = description;
-    }
+        }
+    public String getDescription() {
+        return description;
+        }    
 
-    //for unit = an integer
-    public Integer getUnit(){
-        return unit;
-    }
-    public void setUnit (Integer unit){
+
+    public void setUnit( Integer unit) {
         this.unit = unit;
-    }
+        }
+    public Integer getUnit() {
+        return unit;
+        }
 
-    //for day
-    public String getDay(){
-        return day;
-    }
-    public void setDay (String day){
+
+    public void setDay(String day) {
         this.day = day;
-    }
+        }
+    public String getDay() {
+        return day;
+        }
 
-    //for time
-    public String getTime(){
-        return time;
-    }
-    public void setTime (String time){
+
+    public void setTime(String time) {
         this.time = time;
-    }
-
-    public String toString() {
-        return String.format("%-12s%-30s%-8s%-10s%-10s\n", courseCode, description, unit, day, time + "\n");
-    }
-
-}
+        }
+    public String getTime() {
+        return time;
+        }
+        
+   }
